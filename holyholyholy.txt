@@ -1,9 +1,8 @@
 # Soprano part
-# Are extra comments ok?
 speed: 80 
 octave: 4
 { 
-  C C E E G2 G2 A2 A A G2 E2 # what about a comment here?
+  C C E E G2 G2 A2 A A G2 E2 # Comment within the score!
   G _/2 G/2 G G (> C)2 B G D G A. G/2 G4
 }
 

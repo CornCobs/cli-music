@@ -1,18 +1,5 @@
 {-# LANGUAGE OverloadedStrings, FlexibleContexts #-}
 
-{-|
-Module: Parser
-
-This module describes the grammar of the music DSL of this program.
-A melody consists of:
-* The speed (in beats per minute)
-* The base octave
-* The key signature
-* A list of notes that make up the tune
-
-While a note comprises:
-* 
--}
 module Parser where
 
 import Text.Parsec
