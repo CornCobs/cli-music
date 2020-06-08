@@ -63,6 +63,7 @@ parseMelody = do
   putState (Octave octave)
   separators
   tune <- between (char '{' *> spaces) (char '}') $ sepEndBy parseWithinBrace separators
+  separators
   return $ Melody speed tune
   where parseWithinBrace = sepEndBy parseOctaveChange spaces
                          *> parseChord

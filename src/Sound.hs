@@ -97,5 +97,5 @@ combineMelodiesToSound melodies = foldMap B.floatLE $ foldr1 (zipWith (+)) $ pro
   where processMelody :: Melody -> [Float]
         processMelody (Melody spd tune) = concat $ chordToSound' spd <$> tune
 
-save :: B.Builder -> IO ()
-save sound = B.writeFile "output.raw" $ B.toLazyByteString sound
+save :: FilePath -> B.Builder -> IO ()
+save filename sound = B.writeFile filename $ B.toLazyByteString sound

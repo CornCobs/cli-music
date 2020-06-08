@@ -1,6 +1,7 @@
 module Main where
 
 import qualified Data.Text.IO as TIO
+import System.Environment
 
 import Sound
 import Parser
@@ -8,7 +9,15 @@ import Parser
 
 main :: IO ()
 main = do
-  score <- TIO.readFile "holyholyholy.txt"
-  case runMelodyParser score of 
+  args <- getArgs
+  case args of 
+    [input] -> processFile input "output.raw"
+    [input, output] -> processFile input output
+    _ -> putStrLn "Usage: cli-music INPUT [OUTPUT]"
+
+processFile :: FilePath -> FilePath -> IO ()
+processFile inFile outFile = do 
+  score <- TIO.readFile inFile
+  case runMelodyParser score of
     Left err -> print err
-    Right melody -> save $ combineMelodiesToSound melody
+    Right melody -> save outFile $ combineMelodiesToSound melody

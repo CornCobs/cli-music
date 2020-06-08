@@ -10,7 +10,7 @@ First write your music in a text file, save it e.g. `tune1.txt`
 Now perform the following:
 
 ```
-$ climusic tune1.txt -o tune1.raw
+$ cli-music tune1.txt tune1.raw
 ```
 
 tune1.raw is encoded as 32-bit floating point, little endian. You can play it via

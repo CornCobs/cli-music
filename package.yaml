@@ -1,6 +1,6 @@
-name:                audio
+name:                cli-music
 version:             0.1.0.0
-github:              "CornCobs/audio"
+github:              "CornCobs/cli-music"
 license:             BSD3
 author:              "Author name here"
 maintainer:          "example@example.com"
@@ -17,7 +17,7 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/CornCobs/audio#readme>
+description:         Please see the README on GitHub at <https://github.com/CornCobs/cli-music#readme>
 
 dependencies:
 - base >= 4.7 && < 5
@@ -29,7 +29,7 @@ library:
   source-dirs: src
 
 executables:
-  audio-exe:
+  cli-music:
     main:                Main.hs
     source-dirs:         app
     ghc-options:
@@ -37,10 +37,10 @@ executables:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - audio
+    - cli-music
 
 tests:
-  audio-test:
+  cli-music-test:
     main:                Spec.hs
     source-dirs:         test
     ghc-options:
@@ -48,4 +48,4 @@ tests:
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - audio
+    - cli-music
