@@ -1,0 +1,32 @@
+# Soprano part
+# Are extra comments ok?
+speed: 80 
+octave: 4
+{ 
+  C C E E G2 G2 A2 A A G2 E2 # what about a comment here?
+  G _/2 G/2 G G (> C)2 B G D G A. G/2 G4
+}
+
+# Alto
+speed: 80
+octave: 4
+{
+  < G G > C C < B > D C < B A B > C D E2 C2
+  D D E D C D D E D < B > C. < B/2 B4
+}
+
+# Tenor
+speed: 80
+octave: 3
+{
+  E E C C D F E G F G A B (> C) G G2
+  G G G G E F+ G G B G F+. G/2 G2 F2
+}
+
+# Bass
+speed: 80
+octave: 3
+{
+  C C < A A G2 (> C)2 F2 > F F C2 C2
+  < B B (> C) B A2 B > C D D D. < G/2 G4 
+}
